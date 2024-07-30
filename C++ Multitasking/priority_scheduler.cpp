@@ -28,9 +28,13 @@ void scheduler() {
 }
 
 int main() {
-    task_queue.push({1, task_a});
-    task_queue.push({3, task_c});
-    task_queue.push({2, task_b});
+    Task t1 = {1, task_a};
+    Task t2 = {3, task_c};
+    Task t3 = {2, task_b};
+
+    task_queue.push(t1);
+    task_queue.push(t2);
+    task_queue.push(t3);
     scheduler();
     return 0;
 }
